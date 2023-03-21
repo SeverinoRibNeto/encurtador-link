@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from .forms import FormLinks
 
-# Create your views here.
+
+def home(request):
+    form = FormLinks()
+    return render(request, 'home.html', {'form': form})
