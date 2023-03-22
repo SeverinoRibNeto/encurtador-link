@@ -12,7 +12,7 @@
     <div style="text-align:center;" class="container">
         <h1>Encurtador de Links</h1>
         <hr>
-        <form action="" method="post">
+        <form action="{% url 'encurtar_link' %}" method="post">
             {% csrf_token %}
             <div class="d-flex p-2 flex-column align-items-center">
                 <label>Link para encurtar:</label>
@@ -24,7 +24,7 @@
                     </div>
                     {{form.link_encurtado}}
                 </div>
-                {% if status == 1%}
+                {% if status == "1" %}
                     <p style="color:red;">O link encurtado já foi utilizado! Escolher outro!</p>
                 {%endif%}
                 <input type="submit" value="Criar" class="btn btn-success btn-block w-25 m-4">
