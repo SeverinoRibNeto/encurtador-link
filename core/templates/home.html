@@ -27,6 +27,9 @@
                 {% if status == "1" %}
                     <p style="color:red;">O link encurtado já foi utilizado! Escolher outro!</p>
                 {%endif%}
+                {% if status == "2" %}
+                    <p style="color:red;">O link encurtado não existe! Criar link!</p>
+                {%endif%}
                 <input type="submit" value="Criar" class="btn btn-success btn-block w-25 m-4">
             </div>
         </form>
